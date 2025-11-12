@@ -112,7 +112,6 @@
       border-radius: 8px;
       font-size: 16px;
     }
-    /* Speed Test Section */
     .speed-test-box {
       text-align: center;
       padding: 30px;
@@ -165,100 +164,4 @@
   </div>
 
   <div class="section">
-    <h2>خدماتي</h2>
-    <div class="services">
-      <div class="service">
-        <h3>📶 شبكات الإنترنت</h3>
-        <p>تركيب – صيانة – ترقية السرعة – ضمان 6 أشهر</p>
-      </div>
-      <div class="service">
-        <h3>🖥️ سيرفرات</h3>
-        <p>سيرفرات محلية، بريد، ملفات، نسخ احتياطي</p>
-      </div>
-      <div class="service">
-        <h3>💡 برمجة</h3>
-        <p>تطبيقات ويب، أدوات تقنية، روبوتات دعم</p>
-      </div>
-      <div class="service">
-        <h3>🎨 تصميم مواقع</h3>
-        <p>مواقع احترافية، سريعة، متوافقة مع الجوال</p>
-      </div>
-    </div>
-  </div>
-
-  <div id="book" class="section">
-    <h2>نموذج طلب الخدمة</h2>
-    <div style="max-width:600px; margin:0 auto;">
-      <div class="form-group">
-        <label>الاسم الكامل</label>
-        <input type="text" id="name" placeholder="مثال: محمد أحمد" required>
-      </div>
-      <div class="form-group">
-        <label>العنوان (الحي – الشارع)</label>
-        <input type="text" id="address" placeholder="الضاحية، مقابل مسجد..." required>
-      </div>
-      <div class="form-group">
-        <label>نوع الخدمة</label>
-        <select id="service" required>
-          <option value="">اختر الخدمة</option>
-          <option value="تركيب إنترنت">تركيب إنترنت جديد</option>
-          <option value="صيانة">صيانة شبكات أو راوتر</option>
-          <option value="ترقية سرعة">ترقية سرعة الإنترنت</option>
-          <option value="سيرفر">تركيب أو صيانة سيرفر</option>
-          <option value="برمجة">طلب برمجة تطبيق أو موقع</option>
-          <option value="تصميم موقع">تصميم موقع جديد</option>
-          <option value="دعم فني">دعم فني عاجل</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>الهاتف (واتساب)</label>
-        <input type="tel" id="phone" placeholder="0938120759" required pattern="09[0-9]{8}" title="أدخل رقم سوري صحيح">
-      </div>
-      <div class="form-group">
-        <label>تفاصيل إضافية (اختياري)</label>
-        <textarea id="details" rows="3" placeholder="اشرح مشكلتك أو طلبك بتفصيل"></textarea>
-      </div>
-      <div style="text-align:center;">
-        <button onclick="sendRequest()" class="btn" style="width:100%;">إرسال الطلب إلى واتساب 💬</button>
-      </div>
-    </div>
-  </div>
-
-  <footer>
-    <p>© 2025 khalil alkhalil – خبير تقني في حمص</p>
-    <p>واتساب مباشر: <strong>0938120759</strong></p>
-  </footer>
-</div>
-
-<script>
-  function sendRequest() {
-    const name = document.getElementById('name').value.trim();
-    const address = document.getElementById('address').value.trim();
-    const service = document.getElementById('service').value;
-    const phone = document.getElementById('phone').value.trim();
-    const details = document.getElementById('details').value.trim();
-
-    if (!name || !address || !service || !phone) {
-      alert("من فضلك املأ الحقول المطلوبة.");
-      return;
-    }
-
-    if (!/^09\d{8}$/.test(phone)) {
-      alert("يرجى إدخال رقم هاتف سوري صحيح (يبدأ بـ 09)");
-      return;
-    }
-
-    let msg = `مرحباً خليل،\nطلب خدمة جديدة:\n`;
-    msg += `الاسم: ${name}\n`;
-    msg += `العنوان: ${address}\n`;
-    msg += `نوع الخدمة: ${service}\n`;
-    msg += `الهاتف: ${phone}\n`;
-    if (details) msg += `التفاصيل: ${details}\n`;
-
-    const url = `https://wa.me/963938120759?text=${encodeURIComponent(msg)}`;
-    window.open(url, '_blank');
-  }
-</script>
-
-</body>
-</html>
+   
