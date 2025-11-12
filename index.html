@@ -1,6 +1,12 @@
      <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+     <!-- دعم تطبيق الهاتف (PWA) -->
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/icon-192.png">
+<meta name="theme-color" content="#0D47A1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="خليـل الخليل | فني إنترنت محترف في حمص – تركيب، صيانة، ترقية السرعة. واتساب: 0938120759">
@@ -512,6 +518,19 @@
     toggle.textContent = isDark ? '🌙' : '☀️';
   });
 </script>
-
+<!-- Service Worker لدعم العمل بدون إنترنت -->
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js')
+        .then(function(registration) {
+          console.log('تم تثبيت تطبيق خليل الخليل بنجاح ✅');
+        })
+        .catch(function(error) {
+          console.log('خطأ في التثبيت:', error);
+        });
+    });
+  }
+</script>
 </body>
 </html>
