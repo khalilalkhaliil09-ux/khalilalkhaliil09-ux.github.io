@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="khalil alkhalil | خبير شبكات وسيرفرات وتصميم مواقع في حمص – تركيب، صيانة، برمجة، دعم فني. واتساب: 0938120759">
+  <meta name="description" content="khalil alkhalil | خبير شبكات، سيرفرات، برمجة، وتصميم مواقع في حمص. واتساب: 0938120759">
   <title>khalil alkhalil – خبير تقني في حمص</title>
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -12,7 +12,7 @@
       font-family: 'Tajawal', sans-serif;
     }
     body {
-      background: #f8fbff;
+      background: linear-gradient(to bottom, #e3f2fd, #f8fbff);
       color: #0c2340;
       line-height: 1.6;
     }
@@ -27,7 +27,7 @@
     .ticker span {
       display: inline-block;
       padding-left: 100%;
-      animation: scroll 20s linear infinite;
+      animation: scroll 22s linear infinite;
     }
     @keyframes scroll {
       0% { transform: translateX(0); }
@@ -48,21 +48,24 @@
       color: #0d47a1;
     }
     .hero {
-      background: #e3f2fd;
+      background: white;
       padding: 40px 20px;
       border-radius: 16px;
       text-align: center;
       margin: 20px 0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     }
     .btn {
       display: inline-block;
       background: #25D366;
       color: white;
-      padding: 14px 32px;
-      border-radius: 12px;
+      padding: 14px 36px;
+      border-radius: 14px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 18px;
       margin-top: 15px;
+      box-shadow: 0 4px 12px rgba(37,211,102,0.3);
     }
     .section {
       background: white;
@@ -75,21 +78,23 @@
       color: #0d47a1;
       margin-bottom: 20px;
       text-align: center;
+      font-size: 28px;
     }
     .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
       margin-top: 20px;
     }
     .service {
-      background: #f0f8ff;
+      background: #f0f9ff;
       padding: 20px;
       border-radius: 12px;
       text-align: center;
+      border: 1px solid #e0f0ff;
     }
     .form-group {
-      margin-bottom: 16px;
+      margin-bottom: 18px;
       text-align: right;
     }
     .form-group label {
@@ -99,7 +104,8 @@
       color: #0d47a1;
     }
     .form-group input,
-    .form-group select {
+    .form-group select,
+    .form-group textarea {
       width: 100%;
       padding: 12px;
       border: 1px solid #ccc;
@@ -116,7 +122,7 @@
 </head>
 <body>
 
-<!-- الشريط المتحرك (خبراتك) -->
+<!-- الشريط المتحرك -->
 <div class="ticker">
   <span>📡 خبير شبكات | 🖥️ تركيب وصيانة سيرفرات | 💻 برمجة تطبيقات | 🎨 تصميم مواقع | 📱 دعم فني 24/7 | حمص – سوريا</span>
 </div>
@@ -124,58 +130,110 @@
 <div class="container">
   <div class="header">
     <div class="logo">khalil alkhalil</div>
-    <p>خبير تقني في حمص – شبكات • سيرفرات • برمجة • مواقع</p>
+    <p style="font-size:18px; margin-top:10px;">خبير تقني شامل – حمص، سوريا</p>
   </div>
 
   <div class="hero">
-    <h1>فني الإنترنت رقم 1 في حمص</h1>
-    <p>تركيب • صيانة • ترقية السرعة • دعم فني دائم</p>
+    <h1>خدمات تقنية احترافية في حمص</h1>
+    <p>من التركيب البسيط إلى الحلول البرمجية الكاملة</p>
     <a href="#book" class="btn">اطلب خدمتك الآن 💬</a>
   </div>
 
   <div class="section">
-    <h2>خدماتي الاحترافية</h2>
+    <h2>خدماتي</h2>
     <div class="services">
       <div class="service">
-        <h3>📶 شبكات</h3>
-        <p>تركيب وصيانة إنترنت منزلي وشركات</p>
+        <h3>📶 شبكات الإنترنت</h3>
+        <p>تركيب – صيانة – ترقية السرعة – ضمان 6 أشهر</p>
       </div>
       <div class="service">
         <h3>🖥️ سيرفرات</h3>
-        <p>تركيب وصيانة سيرفرات محلية وشبكات داخلية</p>
+        <p>سيرفرات محلية، بريد، ملفات، نسخ احتياطي</p>
       </div>
       <div class="service">
-        <h3>💻 برمجة</h3>
-        <p>تطوير تطبيقات وأدوات تقنية مخصصة</p>
+        <h3>💡 برمجة</h3>
+        <p>تطبيقات ويب، أدوات تقنية، روبوتات دعم</p>
       </div>
       <div class="service">
         <h3>🎨 تصميم مواقع</h3>
-        <p>مواقع احترافية، سريعة، وتدعم الهاتف</p>
+        <p>مواقع احترافية، سريعة، متوافقة مع الجوال</p>
       </div>
     </div>
   </div>
 
   <div id="book" class="section">
-    <h2>اطلب خدمتك الآن</h2>
-    <div style="max-width:500px; margin:0 auto;">
+    <h2>نموذج طلب الخدمة</h2>
+    <div style="max-width:600px; margin:0 auto;">
       <div class="form-group">
-        <label>اسمك الكامل</label>
+        <label>الاسم الكامل</label>
         <input type="text" id="name" placeholder="مثال: محمد أحمد" required>
+      </div>
+      <div class="form-group">
+        <label>العنوان (الحي – الشارع)</label>
+        <input type="text" id="address" placeholder="الضاحية، مقابل مسجد..." required>
       </div>
       <div class="form-group">
         <label>نوع الخدمة</label>
         <select id="service" required>
           <option value="">اختر الخدمة</option>
-          <option value="شبكات">شبكات إنترنت</option>
-          <option value="سيرفر">سيرفرات</option>
-          <option value="برمجة">برمجة</option>
-          <option value="تصميم">تصميم مواقع</option>
-          <option value="صيانة">صيانة عاجلة</option>
+          <option value="تركيب إنترنت">تركيب إنترنت جديد</option>
+          <option value="صيانة">صيانة شبكات أو راوتر</option>
+          <option value="ترقية سرعة">ترقية سرعة الإنترنت</option>
+          <option value="سيرفر">تركيب أو صيانة سيرفر</option>
+          <option value="برمجة">طلب برمجة تطبيق أو موقع</option>
+          <option value="تصميم موقع">تصميم موقع جديد</option>
+          <option value="دعم فني">دعم فني عاجل</option>
         </select>
       </div>
       <div class="form-group">
-        <label>رقم الهاتف</label>
-        <input type="tel" id="phone" placeholder="093..." required>
+        <label>الهاتف (واتساب)</label>
+        <input type="tel" id="phone" placeholder="0938120759" required pattern="09[0-9]{8}" title="أدخل رقم سوري صحيح">
+      </div>
+      <div class="form-group">
+        <label>تفاصيل إضافية (اختياري)</label>
+        <textarea id="details" rows="3" placeholder="اشرح مشكلتك أو طلبك بتفصيل"></textarea>
       </div>
       <div style="text-align:center;">
-        <a href="https://wa.me/963938120759" class="btn"
+        <button onclick="sendRequest()" class="btn" style="width:100%;">إرسال الطلب إلى واتساب 💬</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 khalil alkhalil – خبير تقني في حمص</p>
+    <p>واتساب مباشر: <strong>0938120759</strong></p>
+  </footer>
+</div>
+
+<script>
+  function sendRequest() {
+    const name = document.getElementById('name').value.trim();
+    const address = document.getElementById('address').value.trim();
+    const service = document.getElementById('service').value;
+    const phone = document.getElementById('phone').value.trim();
+    const details = document.getElementById('details').value.trim();
+
+    if (!name || !address || !service || !phone) {
+      alert("من فضلك املأ الحقول المطلوبة.");
+      return;
+    }
+
+    if (!/^09\d{8}$/.test(phone)) {
+      alert("يرجى إدخال رقم هاتف سوري صحيح (يبدأ بـ 09)");
+      return;
+    }
+
+    let msg = `مرحباً خليل،\nطلب خدمة جديدة:\n`;
+    msg += `الاسم: ${name}\n`;
+    msg += `العنوان: ${address}\n`;
+    msg += `نوع الخدمة: ${service}\n`;
+    msg += `الهاتف: ${phone}\n`;
+    if (details) msg += `التفاصيل: ${details}\n`;
+
+    const url = `https://wa.me/963938120759?text=${encodeURIComponent(msg)}`;
+    window.open(url, '_blank');
+  }
+</script>
+
+</body>
+</html>
