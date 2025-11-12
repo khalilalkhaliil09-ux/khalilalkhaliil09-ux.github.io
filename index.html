@@ -1,503 +1,297 @@
-     <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-     <!-- دعم تطبيق الهاتف (PWA) -->
-<link rel="manifest" href="/manifest.json">
-<link rel="apple-touch-icon" href="/icon-192.png">
-<meta name="theme-color" content="#0D47A1">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="خليـل الخليل | فني إنترنت محترف في حمص – تركيب، صيانة، ترقية السرعة. واتساب: 0938120759">
-  <meta name="keywords" content="فني نت حمص, تركيب واي فاي, صيانة راوتر, إنترنت منزلي,khalil alkhalil">
+  <meta name="description" content="khalil alkhalil | فني إنترنت محترف في حمص – تركيب، صيانة، ترقية السرعة. واتساب: 0938120759">
+  <meta name="keywords" content="فني نت حمص, تركيب واي فاي, صيانة راوتر, إنترنت منزلي, khalil alkhalil">
   <title>khalil alkhalil – فني الإنترنت رقم 1 في حمص</title>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="/icon-192.png">
+  <meta name="theme-color" content="#0D47A1">
+  
   <style>
     :root {
-      --primary: #0d47a1;
-      --primary-light: #1565c0;
-      --secondary: #00c853;
-      --accent: #03a9f4;
+      --primary: #1565C0;
+      --primary-dark: #0D47A1;
+      --secondary: #00C853;
       --whatsapp: #25D366;
-      --light-bg: #f8fbff;
-      --glass-bg: rgba(255, 255, 255, 0.7);
-      --glass-border: rgba(255, 255, 255, 0.4);
-      --dark-bg: #0c1e3e;
-      --text-dark: #0c2340;
-      --text-light: #f0f8ff;
+      --light-bg: #fafcff;
       --card-bg: white;
-      --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-      --shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.15);
+      --shadow: 0 10px 30px rgba(21, 101, 192, 0.12);
     }
 
     [data-theme="dark"] {
-      --card-bg: #1a2a4a;
-      --glass-bg: rgba(30, 40, 70, 0.7);
-      --glass-border: rgba(100, 120, 180, 0.3);
-      --text-dark: var(--text-light);
-      background: var(--dark-bg) !important;
-      color: var(--text-light) !important;
+      --card-bg: #162440;
+      --text-dark: #f0f8ff;
+      background: #0c1e3e !important;
+      color: var(--text-dark) !important;
     }
 
     * {
       margin: 0; padding: 0; box-sizing: border-box;
-      font-family: 'Tajawal', system-ui, sans-serif;
+      font-family: 'Tajawal', sans-serif;
     }
+
     body {
-      background: linear-gradient(135deg, #e3f2fd, #e8f5e9);
-      color: var(--text-dark); line-height: 1.6;
-      transition: background 0.5s, color 0.5s;
-      overflow-x: hidden;
+      background: linear-gradient(135deg, #e8f0fe, #e8f5e9);
+      color: #0c2340;
+      line-height: 1.6;
+      transition: background 0.4s, color 0.4s;
     }
+
     .container {
       max-width: 1200px; margin: 0 auto; padding: 0 20px;
     }
 
-    /* الهيدر */
-    .header {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 18px 24px;
-      background: linear-gradient(135deg, var(--primary), var(--primary-light));
-      color: white; border-radius: 24px;
-      margin: 28px 0; box-shadow: var(--shadow);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-    }
-    .logo {
-      display: flex; align-items: center; gap: 14px;
-    }
-    .logo-icon {
-      width: 48px; height: 48px;
-      background: white; border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      color: var(--primary); font-weight: bold; font-size: 20px;
-    }
-    .logo-text {
-      font-size: 28px; font-weight: 700; letter-spacing: -0.5px;
-    }
-    .theme-toggle {
-      width: 46px; height: 46px; border-radius: 50%;
-      background: rgba(255,255,255,0.2);
-      display: flex; align-items: center; justify-content: center;
-      cursor: pointer; font-size: 20px;
-      transition: all 0.3s;
-    }
-    .theme-toggle:hover {
-      transform: rotate(20deg);
-    }
-
-    /* الشريط الثقة */
     .trust-bar {
-      background: var(--glass-bg);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border: 1px solid var(--glass-border);
-      border-radius: 16px;
+      background: rgba(255,255,255,0.85);
+      border: 1px solid rgba(200,220,255,0.6);
+      border-radius: 18px;
       padding: 14px 24px;
       text-align: center;
       margin: 16px 0;
       box-shadow: var(--shadow);
-      font-weight: 600;
+      font-weight: 700;
+      color: var(--primary-dark);
+      font-size: 17px;
+    }
+
+    .header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px 30px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      border-radius: 28px;
+      margin: 28px 0;
+      box-shadow: var(--shadow);
+    }
+
+    .brand-name {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: 28px;
+      background: linear-gradient(to right, #ffffff, #e3f2fd);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(10,50,100,0.85), rgba(0,100,100,0.85)),
+                  url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80');
+      background-size: cover;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      border-radius: 28px;
+      margin: 30px 0;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    }
+
+    .hero h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 42px;
+      margin-bottom: 15px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--whatsapp);
+      color: white;
+      padding: 16px 40px;
+      border-radius: 18px;
+      font-weight: 800;
+      font-size: 18px;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(37,211,102,0.6);
+      margin-top: 10px;
+    }
+
+    .section {
+      background: var(--card-bg);
+      padding: 50px 30px;
+      border-radius: 24px;
+      margin: 30px 0;
+      box-shadow: var(--shadow);
+    }
+
+    .section-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 32px;
+      color: var(--primary);
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .districts-box {
+      text-align: center;
+      background: var(--light-bg);
+      padding: 24px;
+      border-radius: 16px;
+      margin: 20px 0;
+    }
+
+    .districts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 15px 0;
+    }
+
+    .district {
+      background: #e3f2fd;
+      color: var(--primary-dark);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    .book-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.9);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+      text-align: right;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 700;
       color: var(--primary);
     }
 
-    /* البانر */
-    .hero {
-      background: linear-gradient(rgba(10, 50, 100, 0.8), rgba(0, 100, 100, 0.85)),
-                  url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80');
-      background-size: cover; background-position: center;
-      color: white; text-align: center; padding: 90px 20px;
-      border-radius: 28px; margin: 36px 0;
-      box-shadow: 0 12px 40px rgba(0,0,0,0.3);
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: ""; position: absolute; top: -50%; left: -50%;
-      width: 200%; height: 200%;
-      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-      animation: rotate 20s linear infinite;
-      z-index: 0;
-    }
-    .hero h1 {
-      font-size: 44px; margin-bottom: 20px; position: relative;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.4);
-    }
-    .hero p {
-      font-size: 22px; max-width: 800px; margin: 0 auto 32px;
-      font-weight: 500;
-    }
-    .btn {
-      display: inline-block; background: var(--whatsapp);
-      color: white; padding: 18px 42px; border-radius: 18px;
-      font-weight: 700; font-size: 20px; text-decoration: none;
-      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.6);
-      transition: all 0.3s ease;
-      position: relative;
-      z-index: 2;
-    }
-    .btn:hover {
-      transform: translateY(-5px) scale(1.03);
-      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.8);
-    }
-
-    /* الأقسام */
-    .section {
-      background: var(--card-bg);
-      padding: 60px 40px;
-      border-radius: 28px;
-      margin: 40px 0;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
-      transition: background 0.3s;
-    }
-    .section-title {
-      text-align: center; color: var(--primary);
-      margin-bottom: 40px; font-size: 38px; font-weight: 700;
-      position: relative;
-    }
-    .section-title::after {
-      content: ""; display: block; width: 70px; height: 5px;
-      background: var(--secondary); margin: 14px auto;
-      border-radius: 3px;
-    }
-
-    /* الخدمات */
-    .services-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-      gap: 32px;
-    }
-    .service-card {
-      background: var(--glass-bg);
-      border: 1px solid var(--glass-border);
-      border-radius: 20px; padding: 32px 24px;
-      text-align: center;
-      transition: all 0.4s ease;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      box-shadow: var(--shadow);
-    }
-    .service-card:hover {
-      transform: translateY(-10px);
-      box-shadow: var(--shadow-hover);
-      border-color: rgba(3, 169, 244, 0.4);
-    }
-    .service-icon {
-      font-size: 56px; margin-bottom: 22px; color: var(--primary);
-    }
-    .service-card h3 {
-      color: var(--secondary); margin: 18px 0; font-size: 24px;
-    }
-
-    /* آراء العملاء */
-    .testimonials {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
-    }
-    .testimonial {
-      background: var(--glass-bg);
-      border: 1px solid var(--glass-border);
-      padding: 28px; border-radius: 20px;
-      backdrop-filter: blur(8px);
-      position: relative;
-    }
-    .testimonial::before {
-      content: """";
-      position: absolute; top: 20px; right: 20px;
-      font-size: 60px; color: var(--secondary); opacity: 0.2;
-      font-family: serif;
-    }
-    .testimonial p {
-      font-style: italic; margin-bottom: 16px; font-size: 17px;
-    }
-    .testimonial-footer {
-      display: flex; align-items: center; gap: 12px;
-    }
-    .avatar {
-      width: 48px; height: 48px; border-radius: 50%;
-      background: var(--secondary); display: flex; align-items: center;
-      justify-content: center; color: white; font-weight: bold;
-    }
-    .client-info .name { font-weight: 700; color: var(--primary); }
-    .client-info .district { font-size: 14px; opacity: 0.8; }
-
-    /* أحياء حمص */
-    .districts {
-      display: flex; flex-wrap: wrap; justify-content: center; gap: 14px;
-      margin-top: 24px;
-    }
-    .district {
-      background: var(--glass-bg);
-      border: 1px solid var(--glass-border);
-      padding: 10px 20px; border-radius: 24px;
-      font-size: 16px; color: var(--primary);
-      backdrop-filter: blur(6px);
-    }
-
-    /* نموذج الحجز */
-    .book-form {
-      max-width: 700px; margin: 0 auto;
-      background: var(--glass-bg);
-      border: 1px solid var(--glass-border);
-      padding: 50px; border-radius: 28px;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-    }
-    .form-row { display: flex; gap: 20px; margin-bottom: 24px; }
-    .form-group { flex: 1; text-align: right; }
-    .form-group.full { flex: none; width: 100%; }
-    .form-group label {
-      display: block; margin-bottom: 10px;
-      font-weight: 700; color: var(--primary); font-size: 17px;
-    }
     .form-group input,
     .form-group select {
-      width: 100%; padding: 16px; border: 2px solid #bbdefb;
-      border-radius: 16px; font-size: 17px; outline: none;
-      background: rgba(255,255,255,0.7);
-      transition: border 0.3s;
+      width: 100%;
+      padding: 14px;
+      border: 2px solid #bbdefb;
+      border-radius: 12px;
+      font-size: 16px;
+      outline: none;
     }
-    .form-group input:focus,
-    .form-group select:focus {
-      border-color: var(--secondary);
-    }
-    .arrival-estimate {
-      background: #e8f5e9; padding: 20px; border-radius: 18px;
-      text-align: center; margin: 24px 0;
-      font-size: 22px; font-weight: 700; color: var(--primary);
-      display: none;
-    }
-    .arrival-time {
-      color: var(--secondary); font-size: 28px;
-    }
-    .btn-group {
-      display: flex; gap: 16px; margin-top: 12px;
-    }
-    .btn-group .btn {
-      flex: 1; padding: 16px; font-size: 18px;
-    }
+
     .btn-call {
       background: #3498db;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
     }
 
-    /* الفوتر */
-    .footer {
-      background: linear-gradient(135deg, var(--primary), var(--primary-light));
-      color: white; text-align: center; padding: 40px;
-      border-radius: 28px; margin: 40px 0;
-      box-shadow: var(--shadow);
-    }
-
-    /* زر واتساب ثابت */
-    .whatsapp-btn {
-      position: fixed; bottom: 36px; left: 36px;
-      width: 80px; height: 80px; background: var(--whatsapp);
-      color: white; border-radius: 50%; display: flex;
-      align-items: center; justify-content: center;
-      font-size: 34px; text-decoration: none;
-      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.8);
-      z-index: 2000;
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-      70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-    }
-
-    /* المؤثرات */
-    @keyframes rotate {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-    /* الجوال */
     @media (max-width: 768px) {
       .hero h1 { font-size: 32px; }
-      .hero p { font-size: 19px; }
-      .section { padding: 40px 24px; }
-      .book-form { padding: 30px 20px; }
-      .form-row { flex-direction: column; gap: 0; }
-      .btn-group { flex-direction: column; }
+      .section { padding: 30px 20px; }
     }
   </style>
 </head>
 <body>
 
 <div class="container">
-  <!-- شريط الثقة -->
   <div class="trust-bar">
-    ✅ تم تنفيذ <strong>250+</strong> خدمة في حمص هذا الشهر | ضمان 6 أشهر | نصل خلال ساعة
+    ✅ تم تنفيذ <strong id="serviceCounter">0</strong> خدمة في حمص هذا الشهر | ضمان 6 أشهر | نصل خلال ساعة
   </div>
 
-  <!-- الهيدر -->
-  <header class="header">
-    <div class="logo">
-      <div class="logo-icon">خ</div>
-      <div class="logo-text">خليـل الخليل</div>
-    </div>
-    <div class="theme-toggle" id="themeToggle">🌙</div>
-  </header>
+  <div class="header">
+    <div class="brand-name">khalil alkhalil</div>
+  </div>
 
-  <!-- البانر -->
   <section class="hero">
     <h1>فني الإنترنت رقم 1 في حمص</h1>
     <p>تركيب • صيانة • ترقية السرعة • دعم فني دائم</p>
     <a href="#book" class="btn">احجز خدمتك الآن 💬</a>
   </section>
 
-  <!-- الخدمات -->
-  <section id="services" class="section">
-    <h2 class="section-title">خدماتنا الاحترافية</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">📶</div>
-        <h3>تركيب إنترنت جديد</h3>
-        <p>تركيب كامل مع كابلات عالية الجودة وراوتر مضمون.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🛠️</div>
-        <h3>صيانة وتصليح</h3>
-        <p>إصلاح كل أعطال الإنترنت والراوتر بضمان.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🚀</div>
-        <h3>ترقية السرعة</h3>
-        <p>رفع سرعة الإنترنت لتناسب احتياجاتك.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- آراء العملاء -->
   <section class="section">
-    <h2 class="section-title">آراء عملائنا</h2>
-    <div class="testimonials">
-      <div class="testimonial">
-        <p>خليل وصل خلال 20 دقيقة! حل مشكلة النت اللي ما قدرت حدا يحلها.</p>
-        <div class="testimonial-footer">
-          <div class="avatar">أ</div>
-          <div class="client-info">
-            <div class="name">أحمد</div>
-            <div class="district">الضاحية</div>
-          </div>
-        </div>
+    <h2 class="section-title">نخدم جميع أحياء حمص 🗺️</h2>
+    <div class="districts-box">
+      <div class="districts">
+        <div class="district">الضاحية</div>
+        <div class="district">البياضة</div>
+        <div class="district">الوعر</div>
+        <div class="district">الخالدية</div>
+        <div class="district">الزهور</div>
+        <div class="district">القصور</div>
+        <div class="district">المحطة</div>
+        <div class="district">الغسانية</div>
       </div>
-      <div class="testimonial">
-        <p>الخدمة احترافية، سعر مناسب، وضمان حقيقي. أنصح به!</p>
-        <div class="testimonial-footer">
-          <div class="avatar">س</div>
-          <div class="client-info">
-            <div class="name">سارة</div>
-            <div class="district">البياضة</div>
-          </div>
-        </div>
-      </div>
+      <a href="whatsapp://send?text=ثبّت تطبيق فني الإنترنت خليل الخليل في حمص: https://khalilalkhaliil09-ux.github.io" 
+         class="btn" style="background:#128C7E; font-size:16px; padding:12px 24px;">
+        📤 شارك الخدمة مع صديق
+      </a>
     </div>
   </section>
 
-  <!-- أحياء حمص -->
-  <section class="section">
-    <h2 class="section-title">نخدم جميع أحياء حمص</h2>
-    <div class="districts">
-      <div class="district">الضاحية</div>
-      <div class="district">البياضة</div>
-      <div class="district">الوعر</div>
-      <div class="district">الخالدية</div>
-      <div class="district">الزهور</div>
-      <div class="district">القصور</div>
-      <div class="district">المحطة</div>
-      <div class="district">الغسانية</div>
-    </div>
-  </section>
-
-  <!-- نموذج الحجز -->
   <section id="book" class="section">
     <h2 class="section-title">احجز خدمتك الآن</h2>
     <div class="book-form">
-      <div class="form-row">
-        <div class="form-group">
-          <label>اسمك الكامل</label>
-          <input type="text" id="name" placeholder="مثال: محمد أحمد" required>
-        </div>
-        <div class="form-group">
-          <label>الحي</label>
-          <select id="district" required>
-            <option value="">اختر الحي</option>
-            <option value="الضاحية">الضاحية</option>
-            <option value="البياضة">البياضة</option>
-            <option value="الوعر">الوعر</option>
-            <option value="الخالدية">الخالدية</option>
-            <option value="الزهور">الزهور</option>
-            <option value="القصور">القصور</option>
-            <option value="المحطة">المحطة</option>
-            <option value="الغسانية">الغسانية</option>
-            <option value="حي آخر">حي آخر</option>
-          </select>
-        </div>
+      <div class="form-group">
+        <label>اسمك الكامل</label>
+        <input type="text" id="name" placeholder="مثال: محمد أحمد" required>
       </div>
-      <div class="form-group full">
-        <label>الشارع أو المعلم القريب (اختياري)</label>
-        <input type="text" id="street" placeholder="مثال: مقابل مسجد...">
+      <div class="form-group">
+        <label>الحي</label>
+        <select id="district" required>
+          <option value="">اختر الحي</option>
+          <option value="الضاحية">الضاحية</option>
+          <option value="البياضة">البياضة</option>
+          <option value="الوعر">الوعر</option>
+          <option value="الخالدية">الخالدية</option>
+          <option value="الزهور">الزهور</option>
+          <option value="القصور">القصور</option>
+          <option value="المحطة">المحطة</option>
+          <option value="الغسانية">الغسانية</option>
+          <option value="حي آخر">حي آخر</option>
+        </select>
       </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label>نوع الخدمة</label>
-          <select id="service" required>
-            <option value="">اختر الخدمة</option>
-            <option value="تركيب إنترنت جديد">تركيب إنترنت جديد</option>
-            <option value="صيانة وتصليح">صيانة وتصليح</option>
-            <option value="ترقية السرعة">ترقية السرعة</option>
-            <option value="نقل التركيب">نقل التركيب</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>رقم هاتفك</label>
-          <input type="tel" id="phone" placeholder="093..." required>
-        </div>
+      <div class="form-group">
+        <label>رقم هاتفك</label>
+        <input type="tel" id="phone" placeholder="093..." required>
       </div>
-
-      <div class="arrival-estimate" id="arrivalEstimate">
-        🚗 خليل سيصل خلال: <span class="arrival-time" id="arrivalTime">--</span> دقيقة
-      </div>
-
-      <div class="btn-group">
-        <a href="https://wa.me/963938120759" class="btn">واتساب مباشر 💬</a>
-        <button class="btn btn-call" onclick="callNow()">مكالمة فورية 📞</button>
+      <div style="text-align:center; margin-top:20px;">
+        <a href="https://wa.me/963938120759" class="btn" style="font-size:16px;">واتساب مباشر 💬</a>
+        <button class="btn btn-call" onclick="callNow()" style="margin-top:10px;">مكالمة فورية 📞</button>
       </div>
     </div>
   </section>
 
-  <footer class="footer">
-    <p>© 2025 خليـل الخليل | فني الإنترنت رقم 1 في حمص</p>
-    <p>واتساب: <strong>0938120759</strong> | خدمة سريعة – ضمان – أسعار منافسة</p>
-  </footer>
+  <div style="text-align:center; padding:20px; color:#666;">
+    © 2025 khalil alkhalil – فني الإنترنت في حمص | واتساب: 0938120759
+  </div>
 </div>
 
-<a href="https://wa.me/963938120759" target="_blank" class="whatsapp-btn">💬</a>
-
 <script>
-  // تقدير الوقت
-  const timeEstimates = {
-    "الضاحية": 20, "البياضة": 25, "الوعر": 30, "الخالدية": 15,
-    "الزهور": 22, "القصور": 28, "المحطة": 18, "الغسانية": 35, "حي آخر": 40
-  };
+  // عداد الخدمات
+  function animateCounter(el, target) {
+    let count = 0;
+    const timer = setInterval(() => {
+      count += 2;
+      if (count >= target) {
+        el.textContent = target + "+";
+        clearInterval(timer);
+      } else {
+        el.textContent = count;
+      }
+    }, 20);
+  }
 
-  document.getElementById('district').addEventListener('change', function() {
-    const d = this.value;
-    const est = document.getElementById('arrivalEstimate');
-    const time = document.getElementById('arrivalTime');
-    if (d && timeEstimates[d]) {
-      const base = timeEstimates[d];
-      const rand = Math.floor(Math.random() * 11) - 5;
-      time.textContent = Math.max(10, base + rand);
-      est.style.display = 'block';
-    } else {
-      est.style.display = 'none';
-    }
-  });
+  // أوقات الدوام
+  function toggleCallBtn() {
+    const hour = new Date().getHours();
+    const btn = document.querySelector('.btn-call');
+    if (btn) btn.style.display = (hour >= 8 && hour < 20) ? 'inline-block' : 'none';
+  }
 
   // مكالمة
   function callNow() {
@@ -506,31 +300,19 @@
     }
   }
 
-  // وضع الظلام
-  const toggle = document.getElementById('themeToggle');
-  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    document.body.setAttribute('data-theme', 'dark');
-    toggle.textContent = '☀️';
-  }
-  toggle.addEventListener('click', () => {
-    const isDark = document.body.getAttribute('data-theme') === 'dark';
-    document.body.setAttribute('data-theme', isDark ? 'light' : 'dark');
-    toggle.textContent = isDark ? '🌙' : '☀️';
+  // تشغيل كل شيء
+  document.addEventListener("DOMContentLoaded", () => {
+    const counter = document.getElementById('serviceCounter');
+    if (counter) animateCounter(counter, 250);
+    toggleCallBtn();
+    setInterval(toggleCallBtn, 60000);
+
+    // PWA
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch(console.error);
+    }
   });
 </script>
-<!-- Service Worker لدعم العمل بدون إنترنت -->
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-      navigator.serviceWorker.register('/sw.js')
-        .then(function(registration) {
-          console.log('تم تثبيت تطبيق خليل الخليل بنجاح ✅');
-        })
-        .catch(function(error) {
-          console.log('خطأ في التثبيت:', error);
-        });
-    });
-  }
-</script>
+
 </body>
 </html>
